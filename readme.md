@@ -54,10 +54,11 @@ The setting of test directory is defined in `test.py` as follows:
         model.load_state_dict(ckpt, strict=False)
 ```
 
-To evaluate the performance of UNet and AEMS-Net on the previously acquired dataset, navigate to the `demo.sh` script and uncomment the respective lines corresponding to the desired model. Subsequently, execute the script by running `sh demo.sh` to initiate the performance assessment.
+To evaluate the performance of U-Net and AEMS-Net on the previously acquired dataset, navigate to the `demo.sh` script below and uncomment the respective lines corresponding to the desired model. Subsequently, execute the command in `demo.sh` to initiate the performance assessment.
 
 ```shell
-# test UNet
+# demo.sh
+# test U-Net
 $ cd test/
 $ python test.py --model_name UNet --data_dir 'datasets path' --output_dir 'output path' --input_channels 1 --num_classes 2
 
@@ -75,7 +76,7 @@ Update the following configuration in the `analysis.py` file
 ```python
 # for AEMSN
 model = ImprovedAemsn(n_channels=n_channels, n_classes=n_classes)
-# for UNet
+# for U-Net
 model = UNet(n_channels=n_channels, n_classes=n_classes)
 
 # path 
@@ -102,7 +103,7 @@ $ python analysis.py
 To train the UNet and AEMS-Net models, please uncomment the corresponding lines in the script, and then execute the script.
 
 ```shell
-# train UNet
+# train U-Net
 $ cd train/
 $ python train.py --model_name UNet --epochs 101 --batch_size 8 s --data_dir 'datasets path' --output_dir 'output path' --input_channels 1 --num_classes 2 
 
