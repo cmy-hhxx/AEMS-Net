@@ -1,1 +1,2 @@
-get the pretrained model from :
+get the AEMS-Net pretrained model from :
+https://drive.google.com/file/d/1HbPMMDVrmyArdAMV3oAPubTk2bUG2PSU/view?usp=sharing
