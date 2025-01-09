@@ -10,7 +10,6 @@ perf.data.old
 *.swp
 *.ipynb
 *.pdf
-*.zip
 *.tgz
 *.obj
 test.py
